@@ -9,13 +9,13 @@
 }
 
 
- include_once('config.php'); 
- require_once('../myassets/functions/da_function.php');
- require_once('../myassets/functions/da_sql.inc.php');
+include_once('config.php'); 
+require_once('../myassets/functions/da_function.php');
+require_once('../myassets/functions/da_sql.inc.php');
 require_once('../myassets/functions/timzzy_function.php');
- $handle = new SamMysql($dbC);
- $adminid = $_SESSION['uid'];
- $aname = $_SESSION['name'];
+$handle = new SamMysql($dbC);
+$adminid = $_SESSION['uid'];
+$aname = $_SESSION['name'];
 $timer=time();
 
 
@@ -102,8 +102,6 @@ $countMembers = countrows($handle->getallresult('members') );
 
   
 
-
-
         <!--Editor -->
         <script type="text/javascript" src="../myassets/myeditor/wysiwyg.js"></script><!--my editor did not wrk with this admin panel-->
         <!--//Editor -->
@@ -121,9 +119,13 @@ $countMembers = countrows($handle->getallresult('members') );
 
   <!-- ############################################## Ends My asset includes  for Admin-->
 
+  <!--Angular Js files -->
+    <script  src="js/angular.min.js" data-semver="1.1.5"></script>
+    <script src="question1.js"></script>
+
 
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition skin-blue sidebar-mini" ng-app="upperlink_question1">
     <div class="wrapper">
 
       <header class="main-header">

@@ -5,9 +5,8 @@
 	$dbname="upperlink";
 	
 	// Now let us connect to the database
-	$con=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+	$con = new mysqli("localhost", "root", "", "upperlink");//Database connection her
 	$con2 = new mysqli($dbhost,$dbuser,$dbpass,$dbname);
-	//$dbc=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	$dbC = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname) or die('Error Connecting to MySQL DataBase');
 
 	// Check connection
